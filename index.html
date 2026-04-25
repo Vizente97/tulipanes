@@ -11,7 +11,7 @@ body {
   min-height:100vh; min-height:100dvh;
   background: radial-gradient(ellipse at 50% 30%, #fffef5 0%, #fef9e0 25%, #fdf0c0 56%, #f8e090 100%);
   display:flex; flex-direction:column; align-items:center; justify-content:center;
-  font-family: Georgia, serif; overflow:hidden;
+  font-family: Georgia, serif;
 }
 #wrap {
   display:flex; flex-direction:column; align-items:center; justify-content:center;
@@ -152,6 +152,7 @@ day:   ‘numeric’,
 month: ‘long’,
 year:  ‘numeric’,
 });
+// Resultado ej: “25 de abril de 2026”
 return formatter.format(ahora);
 }
 
@@ -187,8 +188,13 @@ const T0=performance.now();
 let W, H, BASE_Y, tulips=[];
 
 function resize(){
-W = Math.min(window.innerWidth, 920);
-H = Math.min(Math.round(W * 0.72), Math.round(window.innerHeight * 0.78));
+const vw = document.documentElement.clientWidth  || window.innerWidth;
+const vh = document.documentElement.clientHeight || window.innerHeight;
+W = Math.min(vw, 920);
+// Use 72% of width as base height; only shrink if viewport is genuinely tall enough
+const hByWidth = Math.round(W * 0.72);
+const hByView  = Math.round(vh * 0.68);
+H = hByView > 180 ? Math.min(hByWidth, hByView) : hByWidth;
 cv.width = W; cv.height = H;
 cv.style.width = W+“px”; cv.style.height = H+“px”;
 BASE_Y = H * 0.82;
@@ -356,8 +362,15 @@ if(t>4.5) document.getElementById(“fecha”).style.opacity=“1”;
 if(t<10)  requestAnimationFrame(frame);
 }
 
+function start(){
 resize();
 requestAnimationFrame(frame);
+}
+if(document.readyState === “complete”){
+start();
+} else {
+window.addEventListener(“load”, start);
+}
 </script>
 
 </body>
