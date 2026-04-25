@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="es">
 <head>
 <meta charset="UTF-8">
@@ -18,38 +19,39 @@ body {
 }
 
 #nombre-wrap {
-  position:relative; width:min(560px,90vw); height:80px;
-  opacity:0; transition:opacity 2s ease;
-  margin-bottom:6px; display:flex; align-items:center; justify-content:center;
+position:relative; width:min(560px,90vw); height:80px;
+opacity:0; transition:opacity 2s ease;
+margin-bottom:6px; display:flex; align-items:center; justify-content:center;
 }
 #nombre-wrap svg { position:absolute; inset:0; width:100%; height:100%; overflow:visible; }
 #nombre-text {
-  position:relative; z-index:2;
-  font-size:clamp(16px,3.4vw,24px);
-  font-family: Georgia, 'Times New Roman', serif;
-  font-style:italic; font-weight:normal;
-  color:#5a3200;
-  letter-spacing:0.10em;
-  text-shadow: 0 1px 2px rgba(255,220,100,0.5);
-  pointer-events:none;
+position:relative; z-index:2;
+font-size:clamp(16px,3.4vw,24px);
+font-family: Georgia, ‘Times New Roman’, serif;
+font-style:italic; font-weight:normal;
+color:#5a3200;
+letter-spacing:0.10em;
+text-shadow: 0 1px 2px rgba(255,220,100,0.5);
+pointer-events:none;
 }
 
 canvas { display:block; max-width:100%; }
 
 #msg {
-  margin-top:16px; font-size:clamp(14px,2.8vw,22px);
-  color:#3a2a08; font-style:italic; letter-spacing:0.05em;
-  opacity:0; transition:opacity 2.5s ease; text-align:center;
-  padding:0 5vw;
+margin-top:16px; font-size:clamp(14px,2.8vw,22px);
+color:#3a2a08; font-style:italic; letter-spacing:0.05em;
+opacity:0; transition:opacity 2.5s ease; text-align:center;
+padding:0 5vw;
 }
 #fecha {
-  margin-top:10px; margin-bottom:3vh;
-  font-size:clamp(10px,1.6vw,13px); color:#b89a50;
-  letter-spacing:0.12em; opacity:0;
-  transition:opacity 2s ease; text-align:center;
-  font-style:italic;
+margin-top:10px; margin-bottom:3vh;
+font-size:clamp(10px,1.6vw,13px); color:#b89a50;
+letter-spacing:0.12em; opacity:0;
+transition:opacity 2s ease; text-align:center;
+font-style:italic;
 }
 </style>
+
 </head>
 <body>
 <div id="wrap">
@@ -73,259 +75,290 @@ canvas { display:block; max-width:100%; }
         </linearGradient>
       </defs>
 
-      <!-- top double line -->
-      <line x1="30" y1="18" x2="530" y2="18" stroke="url(#goldLine)"  stroke-width="1.8"/>
-      <line x1="30" y1="23" x2="530" y2="23" stroke="url(#goldLine2)" stroke-width="0.8"/>
+```
+  <!-- top double line -->
+  <line x1="30" y1="18" x2="530" y2="18" stroke="url(#goldLine)"  stroke-width="1.8"/>
+  <line x1="30" y1="23" x2="530" y2="23" stroke="url(#goldLine2)" stroke-width="0.8"/>
 
-      <!-- bottom double line -->
-      <line x1="30" y1="57" x2="530" y2="57" stroke="url(#goldLine2)" stroke-width="0.8"/>
-      <line x1="30" y1="62" x2="530" y2="62" stroke="url(#goldLine)"  stroke-width="1.8"/>
+  <!-- bottom double line -->
+  <line x1="30" y1="57" x2="530" y2="57" stroke="url(#goldLine2)" stroke-width="0.8"/>
+  <line x1="30" y1="62" x2="530" y2="62" stroke="url(#goldLine)"  stroke-width="1.8"/>
 
-      <!-- LEFT flourish -->
-      <!-- stem -->
-      <path d="M30,40 Q52,40 62,40" stroke="#c8960a" stroke-width="1.2" fill="none" opacity="0.85"/>
-      <!-- small curl top -->
-      <path d="M30,40 Q28,32 34,28 Q40,24 44,30 Q46,34 42,36" stroke="#c8960a" stroke-width="1.1" fill="none" opacity="0.8"/>
-      <!-- small curl bottom -->
-      <path d="M30,40 Q28,48 34,52 Q40,56 44,50 Q46,46 42,44" stroke="#c8960a" stroke-width="1.1" fill="none" opacity="0.8"/>
-      <!-- diamond dot left -->
-      <path d="M22,40 L26,37 L30,40 L26,43 Z" fill="#d4a010" opacity="0.9"/>
-      <!-- leaf left top -->
-      <path d="M38,34 Q43,28 50,30 Q46,36 38,34 Z" fill="#c89008" opacity="0.55"/>
-      <!-- leaf left bottom -->
-      <path d="M38,46 Q43,52 50,50 Q46,44 38,46 Z" fill="#c89008" opacity="0.55"/>
+  <!-- LEFT flourish -->
+  <path d="M30,40 Q52,40 62,40" stroke="#c8960a" stroke-width="1.2" fill="none" opacity="0.85"/>
+  <path d="M30,40 Q28,32 34,28 Q40,24 44,30 Q46,34 42,36" stroke="#c8960a" stroke-width="1.1" fill="none" opacity="0.8"/>
+  <path d="M30,40 Q28,48 34,52 Q40,56 44,50 Q46,46 42,44" stroke="#c8960a" stroke-width="1.1" fill="none" opacity="0.8"/>
+  <path d="M22,40 L26,37 L30,40 L26,43 Z" fill="#d4a010" opacity="0.9"/>
+  <path d="M38,34 Q43,28 50,30 Q46,36 38,34 Z" fill="#c89008" opacity="0.55"/>
+  <path d="M38,46 Q43,52 50,50 Q46,44 38,46 Z" fill="#c89008" opacity="0.55"/>
 
-      <!-- RIGHT flourish (mirror) -->
-      <path d="M530,40 Q508,40 498,40" stroke="#c8960a" stroke-width="1.2" fill="none" opacity="0.85"/>
-      <path d="M530,40 Q532,32 526,28 Q520,24 516,30 Q514,34 518,36" stroke="#c8960a" stroke-width="1.1" fill="none" opacity="0.8"/>
-      <path d="M530,40 Q532,48 526,52 Q520,56 516,50 Q514,46 518,44" stroke="#c8960a" stroke-width="1.1" fill="none" opacity="0.8"/>
-      <path d="M538,40 L534,37 L530,40 L534,43 Z" fill="#d4a010" opacity="0.9"/>
-      <path d="M522,34 Q517,28 510,30 Q514,36 522,34 Z" fill="#c89008" opacity="0.55"/>
-      <path d="M522,46 Q517,52 510,50 Q514,44 522,46 Z" fill="#c89008" opacity="0.55"/>
+  <!-- RIGHT flourish (mirror) -->
+  <path d="M530,40 Q508,40 498,40" stroke="#c8960a" stroke-width="1.2" fill="none" opacity="0.85"/>
+  <path d="M530,40 Q532,32 526,28 Q520,24 516,30 Q514,34 518,36" stroke="#c8960a" stroke-width="1.1" fill="none" opacity="0.8"/>
+  <path d="M530,40 Q532,48 526,52 Q520,56 516,50 Q514,46 518,44" stroke="#c8960a" stroke-width="1.1" fill="none" opacity="0.8"/>
+  <path d="M538,40 L534,37 L530,40 L534,43 Z" fill="#d4a010" opacity="0.9"/>
+  <path d="M522,34 Q517,28 510,30 Q514,36 522,34 Z" fill="#c89008" opacity="0.55"/>
+  <path d="M522,46 Q517,52 510,50 Q514,44 522,46 Z" fill="#c89008" opacity="0.55"/>
 
-      <!-- center top small ornament -->
-      <path d="M272,14 L278,10 L284,14 L278,18 Z" fill="#d4a010" opacity="0.7"/>
-      <!-- center bottom small ornament -->
-      <path d="M272,66 L278,62 L284,66 L278,70 Z" fill="#d4a010" opacity="0.7"/>
+  <!-- center ornaments -->
+  <path d="M272,14 L278,10 L284,14 L278,18 Z" fill="#d4a010" opacity="0.7"/>
+  <path d="M272,66 L278,62 L284,66 L278,70 Z" fill="#d4a010" opacity="0.7"/>
 
-      <!-- very subtle warm fill behind text area -->
-      <rect x="62" y="20" width="436" height="40" rx="2"
-            fill="rgba(255,240,180,0.18)"/>
-    </svg>
-    <div id="nombre-text"></div>
+  <rect x="62" y="20" width="436" height="40" rx="2"
+        fill="rgba(255,240,180,0.18)"/>
+</svg>
+<div id="nombre-text"></div>
+```
+
   </div>
 
-  <canvas id="c"></canvas>
+<canvas id="c"></canvas>
+
   <div id="msg"></div>
   <div id="fecha"></div>
 
 </div>
 <script>
 // ═══════════════════════════════════════════
+//  MENSAJES — se elige uno al azar cada visita
+// ═══════════════════════════════════════════
+const MENSAJES = [
+  "Eres más fuerte de lo que crees, y más brillante de lo que imaginas 💛",
+  "Cada paso que das, aunque sea pequeño, te acerca más a donde mereces estar ✨",
+  "El mundo es mejor contigo en él — no lo olvides nunca 🌻",
+  "Tienes todo lo que necesitas para lograrlo. Todo. Está dentro de ti 💙",
+  "Los días difíciles no duran, pero tú sí. Tú siempre sigues adelante 🌿",
+  "Eres capaz de cosas extraordinarias — a veces solo hay que recordártelo 💫",
+  "No existe obstáculo que no puedas superar. Ya lo has demostrado antes 🌟",
+  "Eres exactamente la persona que el mundo necesita que seas hoy 💛",
+  "Tu fuerza es real, tu valor es real, y todo lo que sueñas también puede serlo ✨",
+  "Aunque el camino se sienta cuesta arriba, estás construyendo algo hermoso 🌸",
+  "Confía en ti como yo confío en ti — sin dudas, sin reservas 💙",
+  "Hoy, mañana y siempre: eres suficiente, eres capaz, eres increíble 🌻",
+  "Las cosas más difíciles las conquistan las personas más valientes — como tú 💪",
+  "No pares. Lo que buscas también te está buscando a ti 🌟",
+  "Eres luz, incluso en los días que no te sientes así. Siempre 💛",
+];
+
+// ═══════════════════════════════════════════
+//  FECHA AUTOMÁTICA — zona horaria CDMX
+// ═══════════════════════════════════════════
+function fechaCDMX() {
+const ahora = new Date();
+// Forzar zona horaria America/Mexico_City
+const formatter = new Intl.DateTimeFormat(‘es-MX’, {
+timeZone: ‘America/Mexico_City’,
+day:   ‘numeric’,
+month: ‘long’,
+year:  ‘numeric’,
+});
+return formatter.format(ahora);
+}
+
+// ═══════════════════════════════════════════
 //  CONFIG
 // ═══════════════════════════════════════════
 const CONFIG = {
-  nombre:  "Para Paola",                          // ← nombre 
-  mensaje: "Recuerda que aunque el camino se ponga difícil, tienes todo para salir adelante 💙", // ← mensaje debajo del ramo
-  fecha:   "21 de abril, 2026",                       // ← fecha tenue abajo
-  capas: [
-    {n:14, xs:[.04,.10,.17,.23,.30,.37,.44,.51,.57,.63,.70,.77,.83,.90]},
-    {n:15, xs:[.03,.09,.15,.22,.29,.35,.42,.49,.55,.61,.68,.74,.80,.86,.92]},
-    {n:14, xs:[.04,.10,.17,.24,.31,.37,.44,.51,.57,.63,.70,.76,.83,.90]},
-    {n:13, xs:[.06,.12,.19,.26,.33,.40,.47,.53,.60,.67,.74,.81,.88]},
-    {n:11, xs:[.08,.15,.22,.30,.38,.46,.54,.62,.69,.77,.84]},
-    {n:9,  xs:[.11,.18,.26,.34,.43,.52,.61,.69,.78]},
-  ]
+nombre:  “Para Paola”,
+mensaje: MENSAJES[Math.floor(Math.random() * MENSAJES.length)],
+fecha:   fechaCDMX(),
+capas: [
+{n:14, xs:[.04,.10,.17,.23,.30,.37,.44,.51,.57,.63,.70,.77,.83,.90]},
+{n:15, xs:[.03,.09,.15,.22,.29,.35,.42,.49,.55,.61,.68,.74,.80,.86,.92]},
+{n:14, xs:[.04,.10,.17,.24,.31,.37,.44,.51,.57,.63,.70,.76,.83,.90]},
+{n:13, xs:[.06,.12,.19,.26,.33,.40,.47,.53,.60,.67,.74,.81,.88]},
+{n:11, xs:[.08,.15,.22,.30,.38,.46,.54,.62,.69,.77,.84]},
+{n:9,  xs:[.11,.18,.26,.34,.43,.52,.61,.69,.78]},
+]
 };
 // ═══════════════════════════════════════════
 
-document.getElementById("nombre-text").textContent  = CONFIG.nombre;
-document.getElementById("msg").textContent  = CONFIG.mensaje;
-document.getElementById("fecha").textContent = CONFIG.fecha;
+document.getElementById(“nombre-text”).textContent = CONFIG.nombre;
+document.getElementById(“msg”).textContent          = CONFIG.mensaje;
+document.getElementById(“fecha”).textContent        = CONFIG.fecha;
 
-const cv=document.getElementById("c");
-const cx=cv.getContext("2d");
+const cv=document.getElementById(“c”);
+const cx=cv.getContext(“2d”);
 
 const rnd=(a,b)=>a+(b-a)*Math.random();
 const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
 const T0=performance.now();
 
-// Responsive sizing — recalculated on resize
 let W, H, BASE_Y, tulips=[];
 
 function resize(){
-  // Use actual viewport
-  W = Math.min(window.innerWidth, 920);
-  H = Math.min(Math.round(W * 0.72), Math.round(window.innerHeight * 0.78));
-  cv.width = W; cv.height = H;
-  cv.style.width = W+"px"; cv.style.height = H+"px";
-  BASE_Y = H * 0.82;
-  buildTulips();
+W = Math.min(window.innerWidth, 920);
+H = Math.min(Math.round(W * 0.72), Math.round(window.innerHeight * 0.78));
+cv.width = W; cv.height = H;
+cv.style.width = W+“px”; cv.style.height = H+“px”;
+BASE_Y = H * 0.82;
+buildTulips();
 }
 
-window.addEventListener("resize", ()=>{ resize(); });
+window.addEventListener(“resize”, ()=>{ resize(); });
 
 function petalPath(w,h){
-  cx.beginPath();
-  cx.moveTo(0,0);
-  cx.bezierCurveTo( w*.55,-h*.10,  w*.92,-h*.42,  w*.65,-h*.80);
-  cx.bezierCurveTo( w*.50,-h*.95,  w*.20,-h,       0,   -h    );
-  cx.bezierCurveTo(-w*.20,-h,     -w*.50,-h*.95, -w*.65,-h*.80);
-  cx.bezierCurveTo(-w*.92,-h*.42, -w*.55,-h*.10,   0,    0    );
-  cx.closePath();
+cx.beginPath();
+cx.moveTo(0,0);
+cx.bezierCurveTo( w*.55,-h*.10,  w*.92,-h*.42,  w*.65,-h*.80);
+cx.bezierCurveTo( w*.50,-h*.95,  w*.20,-h,       0,   -h    );
+cx.bezierCurveTo(-w*.20,-h,     -w*.50,-h*.95, -w*.65,-h*.80);
+cx.bezierCurveTo(-w*.92,-h*.42, -w*.55,-h*.10,   0,    0    );
+cx.closePath();
 }
 function drawPetal(w,h,c1,c2,c3){
-  const g=cx.createLinearGradient(-w*.3,0,w*.3,-h);
-  g.addColorStop(0,c1); g.addColorStop(0.4,c2); g.addColorStop(1,c3);
-  petalPath(w,h); cx.fillStyle=g; cx.fill();
-  const se=cx.createLinearGradient(-w,0,w,0);
-  se.addColorStop(0,"rgba(80,30,0,.30)"); se.addColorStop(0.18,"rgba(0,0,0,0)");
-  se.addColorStop(0.82,"rgba(0,0,0,0)"); se.addColorStop(1,"rgba(80,30,0,.26)");
-  petalPath(w,h); cx.fillStyle=se; cx.fill();
-  cx.beginPath(); cx.moveTo(0,-h*.04);
-  cx.bezierCurveTo(w*.03,-h*.3,w*.02,-h*.65,0,-h*.96);
-  cx.strokeStyle="rgba(140,70,0,.20)"; cx.lineWidth=w*.10; cx.lineCap="round"; cx.stroke();
-  const hl=cx.createRadialGradient(-w*.15,-h*.52,0,-w*.15,-h*.52,w*.55);
-  hl.addColorStop(0,"rgba(255,255,220,.48)"); hl.addColorStop(1,"rgba(255,255,200,0)");
-  petalPath(w,h); cx.fillStyle=hl; cx.fill();
+const g=cx.createLinearGradient(-w*.3,0,w*.3,-h);
+g.addColorStop(0,c1); g.addColorStop(0.4,c2); g.addColorStop(1,c3);
+petalPath(w,h); cx.fillStyle=g; cx.fill();
+const se=cx.createLinearGradient(-w,0,w,0);
+se.addColorStop(0,“rgba(80,30,0,.30)”); se.addColorStop(0.18,“rgba(0,0,0,0)”);
+se.addColorStop(0.82,“rgba(0,0,0,0)”); se.addColorStop(1,“rgba(80,30,0,.26)”);
+petalPath(w,h); cx.fillStyle=se; cx.fill();
+cx.beginPath(); cx.moveTo(0,-h*.04);
+cx.bezierCurveTo(w*.03,-h*.3,w*.02,-h*.65,0,-h*.96);
+cx.strokeStyle=“rgba(140,70,0,.20)”; cx.lineWidth=w*.10; cx.lineCap=“round”; cx.stroke();
+const hl=cx.createRadialGradient(-w*.15,-h*.52,0,-w*.15,-h*.52,w*.55);
+hl.addColorStop(0,“rgba(255,255,220,.48)”); hl.addColorStop(1,“rgba(255,255,200,0)”);
+petalPath(w,h); cx.fillStyle=hl; cx.fill();
 }
 function shiftHex(hex,amt){
-  const n=parseInt(hex.replace("#",""),16);
-  return`rgb(${clamp((n>>16)+amt,0,255)},${clamp(((n>>8)&0xff)+amt,0,255)},${clamp((n&0xff)+amt,0,255)})`;
+const n=parseInt(hex.replace(”#”,””),16);
+return`rgb(${clamp((n>>16)+amt,0,255)},${clamp(((n>>8)&0xff)+amt,0,255)},${clamp((n&0xff)+amt,0,255)})`;
 }
 const PALS=[
-  {c1:"#bf7800",c2:"#ffc400",c3:"#fff176"},
-  {c1:"#c87200",c2:"#ffb300",c3:"#ffe57f"},
-  {c1:"#e08000",c2:"#ffd600",c3:"#fffff0"},
-  {c1:"#a86000",c2:"#f9a800",c3:"#ffd740"},
+{c1:”#bf7800”,c2:”#ffc400”,c3:”#fff176”},
+{c1:”#c87200”,c2:”#ffb300”,c3:”#ffe57f”},
+{c1:”#e08000”,c2:”#ffd600”,c3:”#fffff0”},
+{c1:”#a86000”,c2:”#f9a800”,c3:”#ffd740”},
 ];
 function drawHead(sc,bloomT,pal,openDeg){
-  if(bloomT<=0)return;
-  const w=20*sc,h=55*sc,bt=clamp(bloomT,0,1);
-  [-openDeg,0,openDeg].forEach(ang=>{
-    cx.save(); cx.rotate(ang*Math.PI/180); cx.scale(bt,bt);
-    drawPetal(w*.90,h*.94,shiftHex(pal.c1,-20),shiftHex(pal.c2,-15),pal.c3);
-    cx.restore();
-  });
-  [-openDeg*.45,0,openDeg*.45].forEach(ang=>{
-    cx.save(); cx.rotate(ang*Math.PI/180); cx.scale(bt,bt);
-    drawPetal(w*.82,h*1.02,pal.c1,pal.c2,shiftHex(pal.c3,15));
-    cx.restore();
-  });
-  if(bt>0.5){
-    const glow=cx.createRadialGradient(0,-h*.20,0,0,-h*.20,w*.45);
-    glow.addColorStop(0,`rgba(255,240,80,${(bt-.5)*1.6*.85})`);
-    glow.addColorStop(1,"rgba(255,200,0,0)");
-    cx.beginPath(); cx.ellipse(0,-h*.20*bt,w*.45*bt,h*.20*bt,0,0,Math.PI*2);
-    cx.fillStyle=glow; cx.fill();
-  }
+if(bloomT<=0)return;
+const w=20*sc,h=55*sc,bt=clamp(bloomT,0,1);
+[-openDeg,0,openDeg].forEach(ang=>{
+cx.save(); cx.rotate(ang*Math.PI/180); cx.scale(bt,bt);
+drawPetal(w*.90,h*.94,shiftHex(pal.c1,-20),shiftHex(pal.c2,-15),pal.c3);
+cx.restore();
+});
+[-openDeg*.45,0,openDeg*.45].forEach(ang=>{
+cx.save(); cx.rotate(ang*Math.PI/180); cx.scale(bt,bt);
+drawPetal(w*.82,h*1.02,pal.c1,pal.c2,shiftHex(pal.c3,15));
+cx.restore();
+});
+if(bt>0.5){
+const glow=cx.createRadialGradient(0,-h*.20,0,0,-h*.20,w*.45);
+glow.addColorStop(0,`rgba(255,240,80,${(bt-.5)*1.6*.85})`);
+glow.addColorStop(1,“rgba(255,200,0,0)”);
+cx.beginPath(); cx.ellipse(0,-h*.20*bt,w*.45*bt,h*.20*bt,0,0,Math.PI*2);
+cx.fillStyle=glow; cx.fill();
+}
 }
 function drawLeaf(sx,sy,tx,ty,side,frac,sc,prog){
-  if(prog<=0)return;
-  const ix=sx+(tx-sx)*frac, iy=sy+(ty-sy)*frac;
-  const len=62*sc, wid=11*sc, leanX=side*10*sc;
-  const atipX=ix+leanX*prog, atipY=iy-len*prog;
-  const lcp1x=ix-wid*.7, lcp1y=iy-len*.30;
-  const lcp2x=ix+leanX*.4-wid*.5, lcp2y=iy-len*.72;
-  const rcp1x=ix+wid*.7, rcp1y=iy-len*.30;
-  const rcp2x=ix+leanX*.4+wid*.5, rcp2y=iy-len*.72;
-  const lg=cx.createLinearGradient(ix,iy,atipX,atipY);
-  lg.addColorStop(0,"#1a5e10"); lg.addColorStop(0.35,"#3aaa28");
-  lg.addColorStop(0.75,"#2e9020"); lg.addColorStop(1,"#1e6e14");
-  cx.save();
-  cx.globalAlpha=clamp(prog*2.5,0,1);
-  cx.beginPath();
-  cx.moveTo(ix,iy);
-  cx.bezierCurveTo(lcp1x,lcp1y,lcp2x+(atipX-ix)*.3,lcp2y,atipX,atipY);
-  cx.bezierCurveTo(rcp2x+(atipX-ix)*.3,rcp2y,rcp1x,rcp1y,ix,iy);
-  cx.closePath();
-  cx.fillStyle=lg; cx.fill();
-  cx.beginPath(); cx.moveTo(ix,iy);
-  cx.quadraticCurveTo(ix+leanX*.4,iy-len*.55,atipX,atipY);
-  cx.strokeStyle="rgba(10,70,5,.30)"; cx.lineWidth=1.3*sc; cx.stroke();
-  cx.globalAlpha=1;
-  cx.restore();
+if(prog<=0)return;
+const ix=sx+(tx-sx)*frac, iy=sy+(ty-sy)*frac;
+const len=62*sc, wid=11*sc, leanX=side*10*sc;
+const atipX=ix+leanX*prog, atipY=iy-len*prog;
+const lcp1x=ix-wid*.7, lcp1y=iy-len*.30;
+const lcp2x=ix+leanX*.4-wid*.5, lcp2y=iy-len*.72;
+const rcp1x=ix+wid*.7, rcp1y=iy-len*.30;
+const rcp2x=ix+leanX*.4+wid*.5, rcp2y=iy-len*.72;
+const lg=cx.createLinearGradient(ix,iy,atipX,atipY);
+lg.addColorStop(0,”#1a5e10”); lg.addColorStop(0.35,”#3aaa28”);
+lg.addColorStop(0.75,”#2e9020”); lg.addColorStop(1,”#1e6e14”);
+cx.save();
+cx.globalAlpha=clamp(prog*2.5,0,1);
+cx.beginPath();
+cx.moveTo(ix,iy);
+cx.bezierCurveTo(lcp1x,lcp1y,lcp2x+(atipX-ix)*.3,lcp2y,atipX,atipY);
+cx.bezierCurveTo(rcp2x+(atipX-ix)*.3,rcp2y,rcp1x,rcp1y,ix,iy);
+cx.closePath();
+cx.fillStyle=lg; cx.fill();
+cx.beginPath(); cx.moveTo(ix,iy);
+cx.quadraticCurveTo(ix+leanX*.4,iy-len*.55,atipX,atipY);
+cx.strokeStyle=“rgba(10,70,5,.30)”; cx.lineWidth=1.3*sc; cx.stroke();
+cx.globalAlpha=1;
+cx.restore();
 }
 function drawStem(bx,by,tx,ty,sc,prog){
-  const ey=by+(ty-by)*prog, ex=bx+(tx-bx)*prog;
-  const mx=(bx+tx)*.5+(tx-bx)*.05, my=(by+ty)*.5;
-  const sg=cx.createLinearGradient(bx-3,0,bx+3,0);
-  sg.addColorStop(0,"#1c6012"); sg.addColorStop(0.5,"#52b83a"); sg.addColorStop(1,"#1c6012");
-  cx.beginPath(); cx.moveTo(bx,by);
-  cx.quadraticCurveTo(mx,my,ex,ey);
-  cx.strokeStyle=sg; cx.lineWidth=4.5*sc; cx.lineCap="round"; cx.stroke();
+const ey=by+(ty-by)*prog, ex=bx+(tx-bx)*prog;
+const mx=(bx+tx)*.5+(tx-bx)*.05, my=(by+ty)*.5;
+const sg=cx.createLinearGradient(bx-3,0,bx+3,0);
+sg.addColorStop(0,”#1c6012”); sg.addColorStop(0.5,”#52b83a”); sg.addColorStop(1,”#1c6012”);
+cx.beginPath(); cx.moveTo(bx,by);
+cx.quadraticCurveTo(mx,my,ex,ey);
+cx.strokeStyle=sg; cx.lineWidth=4.5*sc; cx.lineCap=“round”; cx.stroke();
 }
 
 function makeTulip(xFrac,layer,idx){
-  const sc=.52+layer*.07+rnd(-.03,.03);
-  const distC=Math.abs(xFrac-.5);
-  const stemH=(175-distC*38+layer*7)*sc;
-  const bx=xFrac*W+rnd(-6,6);
-  const by=BASE_Y+rnd(-4,4);
-  const fanX=(xFrac-.5)*stemH*.14;
-  return{
-    bx,by,
-    tx:bx+fanX, ty:by-stemH,
-    sc,
-    delay:layer*.12+idx*.05+rnd(0,.10),
-    swayP:rnd(5,9), swayA:rnd(.004,.011), swayO:rnd(0,Math.PI*2),
-    pal:PALS[Math.floor(Math.random()*PALS.length)],
-    openDeg:rnd(10,22),
-    leaves:[
-      {side: 1, frac:rnd(.28,.40)},
-      {side:-1, frac:rnd(.46,.60)},
-    ]
-  };
+const sc=.52+layer*.07+rnd(-.03,.03);
+const distC=Math.abs(xFrac-.5);
+const stemH=(175-distC*38+layer*7)*sc;
+const bx=xFrac*W+rnd(-6,6);
+const by=BASE_Y+rnd(-4,4);
+const fanX=(xFrac-.5)*stemH*.14;
+return{
+bx,by,
+tx:bx+fanX, ty:by-stemH,
+sc,
+delay:layer*.12+idx*.05+rnd(0,.10),
+swayP:rnd(5,9), swayA:rnd(.004,.011), swayO:rnd(0,Math.PI*2),
+pal:PALS[Math.floor(Math.random()*PALS.length)],
+openDeg:rnd(10,22),
+leaves:[
+{side: 1, frac:rnd(.28,.40)},
+{side:-1, frac:rnd(.46,.60)},
+]
+};
 }
 
 function buildTulips(){
-  tulips=[];
-  CONFIG.capas.forEach((L,li)=>{
-    L.xs.forEach((x,ni)=>{
-      tulips.push(makeTulip(x+rnd(-.008,.008), li, ni));
-    });
-  });
-  tulips.sort((a,b)=>a.by-b.by);
+tulips=[];
+CONFIG.capas.forEach((L,li)=>{
+L.xs.forEach((x,ni)=>{
+tulips.push(makeTulip(x+rnd(-.008,.008), li, ni));
+});
+});
+tulips.sort((a,b)=>a.by-b.by);
 }
 
 function frame(now){
-  const t=(now-T0)/1000;
-  cx.clearRect(0,0,W,H);
+const t=(now-T0)/1000;
+cx.clearRect(0,0,W,H);
 
-  const shg=cx.createRadialGradient(W*.5,BASE_Y+5,5,W*.5,BASE_Y+5,W*.40);
-  shg.addColorStop(0,"rgba(0,0,0,.11)"); shg.addColorStop(1,"rgba(0,0,0,0)");
-  cx.beginPath(); cx.ellipse(W*.5,BASE_Y+8,W*.36,20,0,0,Math.PI*2);
-  cx.fillStyle=shg; cx.fill();
+const shg=cx.createRadialGradient(W*.5,BASE_Y+5,5,W*.5,BASE_Y+5,W*.40);
+shg.addColorStop(0,“rgba(0,0,0,.11)”); shg.addColorStop(1,“rgba(0,0,0,0)”);
+cx.beginPath(); cx.ellipse(W*.5,BASE_Y+8,W*.36,20,0,0,Math.PI*2);
+cx.fillStyle=shg; cx.fill();
 
-  tulips.forEach(tu=>{
-    const lt=t-tu.delay;
-    if(lt<=0)return;
-    const stemP =clamp(lt/.70,0,1);
-    const leafP =clamp((lt-.10)/.90,0,1);
-    const bloomT=clamp((lt-.28)/1.1,0,1);
-    const sway  =Math.sin(t/tu.swayP*Math.PI*2+tu.swayO)*tu.swayA;
-    cx.save();
-    cx.translate(tu.bx,tu.by); cx.rotate(sway); cx.translate(-tu.bx,-tu.by);
-    tu.leaves.forEach(l=>{
-      drawLeaf(tu.bx,tu.by,tu.tx,tu.ty,l.side,l.frac,tu.sc,leafP);
-    });
-    drawStem(tu.bx,tu.by,tu.tx,tu.ty,tu.sc,stemP);
-    const ftx=tu.bx+(tu.tx-tu.bx)*stemP;
-    const fty=tu.by+(tu.ty-tu.by)*stemP;
-    cx.save(); cx.translate(ftx,fty);
-    drawHead(tu.sc,bloomT,tu.pal,tu.openDeg);
-    cx.restore();
-    cx.restore();
-  });
+tulips.forEach(tu=>{
+const lt=t-tu.delay;
+if(lt<=0)return;
+const stemP =clamp(lt/.70,0,1);
+const leafP =clamp((lt-.10)/.90,0,1);
+const bloomT=clamp((lt-.28)/1.1,0,1);
+const sway  =Math.sin(t/tu.swayP*Math.PI*2+tu.swayO)*tu.swayA;
+cx.save();
+cx.translate(tu.bx,tu.by); cx.rotate(sway); cx.translate(-tu.bx,-tu.by);
+tu.leaves.forEach(l=>{
+drawLeaf(tu.bx,tu.by,tu.tx,tu.ty,l.side,l.frac,tu.sc,leafP);
+});
+drawStem(tu.bx,tu.by,tu.tx,tu.ty,tu.sc,stemP);
+const ftx=tu.bx+(tu.tx-tu.bx)*stemP;
+const fty=tu.by+(tu.ty-tu.by)*stemP;
+cx.save(); cx.translate(ftx,fty);
+drawHead(tu.sc,bloomT,tu.pal,tu.openDeg);
+cx.restore();
+cx.restore();
+});
 
-  if(t>0.8) document.getElementById("nombre-wrap").style.opacity="1";
-  if(t>3.2) document.getElementById("msg").style.opacity="1";
-  if(t>4.5) document.getElementById("fecha").style.opacity="1";
-  if(t<10)  requestAnimationFrame(frame);
+if(t>0.8) document.getElementById(“nombre-wrap”).style.opacity=“1”;
+if(t>3.2) document.getElementById(“msg”).style.opacity=“1”;
+if(t>4.5) document.getElementById(“fecha”).style.opacity=“1”;
+if(t<10)  requestAnimationFrame(frame);
 }
 
 resize();
 requestAnimationFrame(frame);
 </script>
+
 </body>
 </html>
